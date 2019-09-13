@@ -4,7 +4,6 @@ import axios from 'axios';
 
 import Smurf from '../components/Smurf';
 import SmurfForm from '../components/SmurfForm';
-import FormikSmurfForm from '../components/SmurfForm';
 
 import "./App.css";
 
@@ -31,7 +30,7 @@ const App  = () => {
     return (
       <SmurfContext.Provider value={smurf}>
         <Smurf />
-        <FormikSmurfForm />
+        <SmurfForm />
       </SmurfContext.Provider>
     );
 }
