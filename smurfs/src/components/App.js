@@ -11,7 +11,7 @@ import "./App.css";
 import { SmurfContext } from '../contexts/SmurfContext';
 
 const App  = () => {
-  const [smurf, setSmurf] = useState({});
+  const [smurf, setSmurf] = useState([]);
 
   useEffect(() => {
     // setSmurf({"name":"Brainey","age":200,"height":"5cm","id":0})
@@ -23,14 +23,14 @@ const App  = () => {
     })
     .catch(err => console.log(err.response.message))
   
-  }, [])
+  }, [setSmurf])
 
   console.log(SmurfContext)
 
     return (
       <SmurfContext.Provider value={smurf}>
-        <Smurf />
         <SmurfForm />
+        <Smurf />
       </SmurfContext.Provider>
     );
 }
