@@ -8,21 +8,23 @@ import { SmurfContext } from '../contexts/SmurfContext';
 
 function LoginForm({ values, errors, touched, isSubmitting }) {
   return (
-    <Form>
-      <div>
-        {touched.name && errors.name && <p>{errors.name}</p>}
-        <Field type="text" name="name" placeholder="name" />
-      </div>
-      <div>
-        {touched.age && errors.age && <p>{errors.age}</p>}
-        <Field type="text" name="age" placeholder="age" />
-      </div>
-      <div>
-        {touched.height && errors.height && <p>{errors.height}</p>}
-        <Field type="text" name="height" placeholder="height" />
-      </div>
-      <button type='submit' disabled={isSubmitting}>Submit</button>
-    </Form>
+    <div className='App'>
+      <Form>
+        <div>
+          {touched.name && errors.name && <p>{errors.name}</p>}
+          <Field type="text" name="name" placeholder="name" />
+        </div>
+        <div>
+          {touched.age && errors.age && <p>{errors.age}</p>}
+          <Field type="text" name="age" placeholder="age" />
+        </div>
+        <div>
+          {touched.height && errors.height && <p>{errors.height}</p>}
+          <Field type="text" name="height" placeholder="height" />
+        </div>
+        <button type='submit' disabled={isSubmitting}>Submit</button>
+      </Form>
+    </div>
   );
 }
 

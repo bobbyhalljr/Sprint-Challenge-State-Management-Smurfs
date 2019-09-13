@@ -18,19 +18,21 @@ const App  = () => {
 
     axios.get('http://localhost:3333/smurfs')
     .then(res => {
-      console.log(res.data)
+      // console.log(res.data)
       setSmurf(res.data)
     })
     .catch(err => console.log(err.response.message))
   
-  }, [setSmurf])
+  }, [smurf])
 
-  console.log(SmurfContext)
+  // console.log(SmurfContext)
 
     return (
       <SmurfContext.Provider value={smurf}>
-        <SmurfForm />
-        <Smurf />
+        <div className='App'>
+          <SmurfForm />
+          <Smurf />
+        </div>
       </SmurfContext.Provider>
     );
 }
